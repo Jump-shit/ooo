@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GET OUT | Romantic Comedy</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>GET IN | Romantic Comedy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,116 +15,272 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:Inter,sans-serif;
 background:#faf8f5;
-color:#111;
-line-height:1.7;
+color:#222;
+line-height:1.8;
 }
 
 nav{
+position:fixed;
+top:0;
+width:100%;
+padding:22px 9%;
 display:flex;
 justify-content:space-between;
-padding:30px 10%;
-position:fixed;
-width:100%;
-background:rgba(250,248,245,.9);
-backdrop-filter:blur(10px);
+align-items:center;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(12px);
+z-index:1000;
 }
 
 nav h2{
 font-family:"Playfair Display";
+letter-spacing:2px;
 }
 
 nav a{
 text-decoration:none;
-color:#111;
-margin-left:25px;
+color:#222;
+margin-left:28px;
+font-weight:500;
+transition:.3s;
 }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-
-.hero h1{
-font-size:72px;
-font-family:"Playfair Display";
-}
-
-.hero h3{
-font-size:28px;
-margin:20px 0;
-font-weight:400;
+nav a:hover{
 color:#d46a8c;
 }
 
-.hero p{
-max-width:600px;
-font-size:20px;
-margin-bottom:40px;
-}
+.hero{
 
-button{
-padding:15px 40px;
-border:none;
-background:#111;
-color:white;
-border-radius:40px;
-cursor:pointer;
-transition:.3s;
-font-size:16px;
-}
+height:100vh;
 
-button:hover{
-background:#d46a8c;
-}
+background:
+linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
+url("Poster1.png");
 
-.section{
-padding:100px 10%;
-text-align:center;
-}
+background-size:cover;
 
-.section h2{
-font-size:42px;
-font-family:"Playfair Display";
-margin-bottom:20px;
-}
+background-position:center;
 
-.cards{
 display:flex;
-gap:30px;
+
 justify-content:center;
-flex-wrap:wrap;
-margin-top:50px;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+padding:20px;
+
 }
 
-.card{
+.hero h1{
+
+font-size:90px;
+
+font-family:"Playfair Display";
+
+letter-spacing:4px;
+
+}
+
+.hero h3{
+
+font-size:30px;
+
+font-weight:300;
+
+margin:20px 0;
+
+color:#ffd6e5;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+}
+
+.hero button{
+
+padding:18px 42px;
+
+border:none;
+
+border-radius:40px;
+
+font-size:17px;
+
 background:white;
-padding:30px;
-border-radius:20px;
-width:280px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+color:#222;
+
+cursor:pointer;
+
 transition:.3s;
+
 }
 
-.card:hover{
-transform:translateY(-8px);
+.hero button:hover{
+
+background:#d46a8c;
+
+color:white;
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+h2{
+
+font-family:"Playfair Display";
+
+font-size:48px;
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:40px;
+
+}
+
+video{
+
+width:100%;
+
+max-width:950px;
+
+display:block;
+
+margin:auto;
+
+border-radius:20px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+}
+
+.poster-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:40px;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.poster-container img{
+
+width:330px;
+
+border-radius:18px;
+
+transition:.35s;
+
+box-shadow:0 18px 45px rgba(0,0,0,.18);
+
+}
+
+.poster-container img:hover{
+
+transform:translateY(-10px) scale(1.02);
+
+}
+
+.about{
+
+max-width:850px;
+
+margin:auto;
+
+text-align:center;
+
+font-size:18px;
+
+}
+
+.reflection{
+
+max-width:950px;
+
+margin:auto;
+
+background:white;
+
+padding:50px;
+
+border-radius:22px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.reflection h3{
+
+font-family:"Playfair Display";
+
+margin-top:30px;
+
+margin-bottom:12px;
+
+font-size:30px;
+
+color:#d46a8c;
+
 }
 
 footer{
-padding:50px;
-text-align:center;
-background:#111;
-color:white;
+
 margin-top:80px;
+
+padding:60px;
+
+background:#111;
+
+color:white;
+
+text-align:center;
+
+}
+
+footer h2{
+
+margin-bottom:15px;
+
+color:white;
+
 }
 
 </style>
@@ -133,15 +291,17 @@ margin-top:80px;
 
 <nav>
 
-<h2>GET OUT</h2>
+<h2>GET IN</h2>
 
 <div>
 
-<a href="#">Home</a>
+<a href="#trailer">Trailer</a>
 
-<a href="#">Cast</a>
+<a href="#poster">Posters</a>
 
-<a href="#">Gallery</a>
+<a href="#about">About</a>
+
+<a href="#reflection">Reflection</a>
 
 </div>
 
@@ -149,70 +309,145 @@ margin-top:80px;
 
 <section class="hero">
 
-<h1>GET OUT</h1>
+<div>
 
-<h3>A Romantic Comedy</h3>
+<h1>GET IN</h1>
+
+<h3>A Romantic Comedy Remix</h3>
 
 <p>
 Love isn't always easy.
 Sometimes meeting the parents changes everything.
 </p>
 
-<button>Watch Trailer</button>
+<a href="#trailer">
+
+<button>▶ Watch Trailer</button>
+
+</a>
+
+</div>
 
 </section>
 
-<section class="section">
+<section id="trailer">
+
+<h2>Official Trailer</h2>
+
+<p class="subtitle">
+
+Watch the romantic comedy version of <em>Get Out</em>.
+
+</p>
+
+<video controls>
+
+<source src="trailer.mp4" type="video/mp4">
+
+Your browser does not support HTML5 video.
+
+</video>
+
+</section>
+
+<section id="poster">
+
+<h2>Official Posters</h2>
+
+<p class="subtitle">
+
+Movie posters created for the genre remix project.
+
+</p>
+
+<div class="poster-container">
+
+<img src="Poster1.png">
+
+<img src="Poster2.png">
+
+</div>
+
+</section>
+
+<section id="about">
 
 <h2>About the Film</h2>
 
-<p style="max-width:700px;margin:auto;">
-Chris is ready to meet his girlfriend Rose's family for the first time.
-What starts as a perfect romantic weekend slowly turns into an unforgettable journey filled with awkward family moments, unexpected surprises, and a love story that will keep everyone smiling.
+<div class="about">
+
+<p>
+
+Chris is excited to spend a weekend with his girlfriend Rose and meet her family for the first time. What begins as a perfect romantic getaway soon becomes a series of awkward family moments, unexpected surprises, and hilarious misunderstandings. Together, they must overcome every obstacle and discover that true love is worth fighting for.
+
 </p>
 
-</section>
-
-<section class="section">
-
-<h2>Meet the Characters</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Chris</h3>
-<p>The charming boyfriend looking for true love.</p>
-</div>
-
-<div class="card">
-<h3>Rose</h3>
-<p>Sweet, beautiful, and full of surprises.</p>
-</div>
-
-<div class="card">
-<h3>The Family</h3>
-<p>Warm, welcoming... and just a little unusual.</p>
-</div>
-
 </div>
 
 </section>
 
-<section class="section">
+<section id="reflection">
 
-<h2>Coming Soon</h2>
+<h2>Behind the Project</h2>
 
-<p>❤️ Valentine's Day 2027 ❤️</p>
+<div class="reflection">
+
+<h3>Why I Chose <em>Get Out</em></h3>
+
+<p>
+
+I chose <em>Get Out</em> almost immediately because it is one of the movies that impressed me the most. I know the story very well, which made it easier for me to imagine a completely different version of the film. I believed the story could be transformed into a romantic comedy about a couple overcoming misunderstandings before finally finding their way back to each other.
+
+</p>
+
+<h3>Creating the Trailer</h3>
+
+<p>
+
+The trailer was the most difficult and time-consuming part of this project. Re-editing nearly two hours of footage into a two-minute romantic comedy trailer was a completely new experience for me. At first, I spent a long time searching for background music but couldn't find anything that matched my ideas. Instead, I started by selecting scenes from the original movie and reorganizing them into a new storyline. Later, while watching short videos online, I found a piece of music that perfectly matched the atmosphere I wanted. I then edited every shot according to the rhythm of the music and slowly completed the trailer.
+
+</p>
+
+<h3>Building the Website</h3>
+
+<p>
+
+Creating the website was the part I felt most confident about because it is closely related to my major in computer science. After finishing the trailer and posters, I realized I didn't want to submit them as separate files. Instead, I wanted to present everything together in one clean and professional website, similar to an official movie page. I chose a simple layout, soft colors, and elegant typography to match the romantic comedy style while keeping the website easy to navigate.
+
+</p>
+
+<h3>Reflection</h3>
+
+<p>
+
+This project helped me realize that genre is not only created by the story itself but also by the way a film is presented. By changing the music, editing, posters, and website design, the same movie can create completely different expectations for the audience. Through this project, I gained a better understanding of genre conventions and the importance of film marketing.
+
+</p>
+
+</div>
 
 </section>
 
 <footer>
 
-<h2>GET OUT</h2>
+<h2>GET IN</h2>
 
-<p>The Romantic Comedy Everyone Will Fall For.</p>
+<p>
+
+Genre Remix Project
+
+</p>
+
+<br>
+
+<p>
+
+Created by Jump
+
+</p>
 
 </footer>
 
 </body>
+
 </html>
